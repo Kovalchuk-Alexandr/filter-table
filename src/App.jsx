@@ -1,4 +1,8 @@
 import { useState } from 'react'
+import Gallery from "./Gallery";
+import List from "./List";
+import RecipeList from "./Recipes";
+import Poem from "./Poem";
 
 function ProductCategoryRow({ category }) {
 	return (
@@ -98,10 +102,17 @@ function FilterableProductTable({ products }) {
 function App() {
 
   return (
-    <>
-		<FilterableProductTable className="frame" products={PRODUCTS} />
-    </>
-  )
+      <>
+          <FilterableProductTable className="frame" products={PRODUCTS} />
+          <hr className="modern-line" />
+          <Poem />
+          <hr className="modern-line" />
+          <RecipeList />
+          <hr className="modern-line" />
+          <List />
+          {/* <Gallery /> */}
+      </>
+  );
 }
 
 const PRODUCTS = [

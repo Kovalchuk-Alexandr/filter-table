@@ -85,6 +85,7 @@ th.category-title {text-align: center;}
 
 .frame {
 	padding: 5px;
+	margin-bottom: 30px;
 	border: 1px solid #d3d3d3;
 	border-radius: 5px;
 }
@@ -102,4 +103,70 @@ th.category-title {text-align: center;}
 .product-table{
 	width: 100%;
 }
+
+.scientists {margin-top: 20px;}
+.avatar { margin: 5px; border-radius: 50%; min-height: 70px; }
+.profile {
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+.profileList {padding: unset;}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+ul { list-style-type: none; padding: 0px 10px; }
+li {
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+}
+img { width: 100px; height: 100px; border-radius: 50%; }
+
+.title {margin-left: 20px; margin-bottom: 10px;}
+.article {
+	max-width: 600px;
+	padding: 5px 10px;
+	border: 1px solid #d3d3d3;
+	border-radius: 10px;
+
+}
+
+.center {text-align: center;}
+
+.person-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 5px;
+
+}
+
+.modern-line {
+    border: none;
+    border-top: 2px solid #333;
+    color: #333;
+    height: 0;
+    width: 80%;
+    margin: 30px auto; /* Центрирование и отступы */
+}
+
+.separ-line {
+    border: none;
+    border-top: 1px dashed rgb(146, 146, 236);
+    color: #333;
+    height: 0;
+    width: 50%;
+    margin: 20px auto; /* Центрирование и отступы */
+}
+
+ul.list {margin-left: 40px; list-style-type: auto}
+.list-item {list-style: disc;}
+.list-item::before {content: •;}
 
