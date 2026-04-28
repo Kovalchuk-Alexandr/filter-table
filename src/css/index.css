@@ -131,10 +131,26 @@ img { width: 100px; height: 100px; border-radius: 50%; }
 .title {margin-left: 20px; margin-bottom: 10px;}
 .article {
 	max-width: 600px;
-	padding: 5px 10px;
+	padding: 10px 10px;
 	border: 1px solid #d3d3d3;
 	border-radius: 10px;
 
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-between; */
+	align-items: center;
+	gap: 15px;
+}
+
+.flex-start {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-between; */
+	align-items: flex-start;
+	gap: 15px;
 }
 
 .center {text-align: center;}
@@ -170,3 +186,56 @@ ul.list {margin-left: 40px; list-style-type: auto}
 .list-item {list-style: disc;}
 .list-item::before {content: •;}
 
+.list {display: flex;
+justify-content: flex-start;
+align-items: center;
+gap: 15px;
+}
+
+.button-set {display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+}
+
+.button-inset {
+	width: 152px;
+    appearance: none;
+    padding: 0.5rem 1rem;
+    border: none;
+	border-radius: 6px;
+	text-align: center;
+	/* outline: 1px solid rgba(0, 0, 0, 0.2); */
+    background: #f0f0f0;
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+.button-inset--small {width: 70px;}
+
+.button-inset:active {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.button-inset:hover {outline: 1px solid rgba(0, 0, 0, 0.25);}
+
+.input-inset {
+	margin-right: 10px;
+	/* width: 152px; */
+    appearance: none;
+    padding: 0.5rem 1rem;
+    border: none;
+	border-radius: 6px;
+	/* text-align: center; */
+	/* outline: 1px solid rgba(0, 0, 0, 0.2); */
+    background: transparent;
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+.input-inset:active, .input-inset:focus {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+	outline: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.input-inset:hover {outline: 1px solid rgba(0, 0, 0, 0.25);}

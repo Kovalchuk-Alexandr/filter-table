@@ -1,3 +1,4 @@
+/* Рендеринг списков с разделителем */
 import { Fragment } from "react";
 
 const poem = {

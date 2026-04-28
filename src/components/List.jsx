@@ -1,5 +1,6 @@
-import { people } from "./data/data";
-import { getImageUrl } from "./utils";
+/* Разделение списка на две части (filter) */
+import { people } from "../data/data";
+import { getImageUrl } from "../utils";
 
 function PeopleList({ title, persons }) {
 	const listItems = persons.map(person =>

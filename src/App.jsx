@@ -1,8 +1,11 @@
 import { useState } from 'react'
-import Gallery from "./Gallery";
-import List from "./List";
-import RecipeList from "./Recipes";
-import Poem from "./Poem";
+import Gallery from "./components/Gallery";
+import List from "./components/List";
+import RecipeList from "./components/Recipes";
+import Poem from "./components/Poem";
+import SculptureGallery from "./components/SculptureGallery";
+import ShoppingCart from "./components/ShoppingCart";
+import TaskApp from "./components/todo";
 
 function ProductCategoryRow({ category }) {
 	return (
@@ -104,6 +107,12 @@ function App() {
   return (
       <>
           <FilterableProductTable className="frame" products={PRODUCTS} />
+          <hr className="modern-line" />
+          <TaskApp />
+          <hr className="modern-line" />
+          <ShoppingCart />
+          <hr className="modern-line" />
+          <SculptureGallery />
           <hr className="modern-line" />
           <Poem />
           <hr className="modern-line" />

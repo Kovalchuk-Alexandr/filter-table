@@ -1,4 +1,4 @@
-import { getImageUrl } from "./utils";
+import { getImageUrl } from "../utils";
 
 function Profile({ name, profession, discovered, imageId, size=70, awards }) {
 	// console.log("name: ", name)

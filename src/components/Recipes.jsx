@@ -1,4 +1,4 @@
-import { recipes } from "./data/recipes";
+import { recipes } from "../data/recipes";
 
 function RecipeItem({ recipe }) {
 	// const listItems = recipe.ingredients.map(item => console.log("item: ", item));
