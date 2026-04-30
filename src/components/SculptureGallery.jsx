@@ -13,11 +13,6 @@ export default function SculptureGallery() {
 	}
 
 	function handleNextClick() {
-		// console.log(
-        //     "index: %d of List length: %d",
-        //     index,
-        //     sculptureList.length - 2,
-        // );
         if (hasNext) setIndex(index + 1);
     }
 

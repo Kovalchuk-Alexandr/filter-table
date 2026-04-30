@@ -6,6 +6,8 @@ import Poem from "./components/Poem";
 import SculptureGallery from "./components/SculptureGallery";
 import ShoppingCart from "./components/ShoppingCart";
 import TaskApp from "./components/todo";
+import Picture from "./components/PictureBg";
+import EditProfile from "./components/EditProfile";
 
 function ProductCategoryRow({ category }) {
 	return (
@@ -107,6 +109,10 @@ function App() {
   return (
       <>
           <FilterableProductTable className="frame" products={PRODUCTS} />
+          <hr className="modern-line" />
+          <EditProfile />
+          <hr className="modern-line" />
+          <Picture />
           <hr className="modern-line" />
           <TaskApp />
           <hr className="modern-line" />

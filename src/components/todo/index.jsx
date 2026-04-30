@@ -12,23 +12,36 @@ const initialTodos = [
 export default function TaskApp() {
     const [todos, setTodos] = useState(initialTodos);
 
-    function handleAddTodo(title) {
-        todos.push({
-            id: nextId++,
-            title: title,
-            done: false,
-        });
+	function handleAddTodo(title) {
+        setTodos([...todos, { id: nextId++, title: title, done: false }]);
+        // todos.push({
+        //     id: nextId++,
+        //     title: title,
+        //     done: false,
+        // });
+        // console.log("todos: ", todos);
     }
 
     function handleChangeTodo(nextTodo) {
-        const todo = todos.find((t) => t.id === nextTodo.id);
-        todo.title = nextTodo.title;
-        todo.done = nextTodo.done;
+        // const todo = todos.find((t) => t.id === nextTodo.id);
+        // todo.title = nextTodo.title;
+        // todo.done = nextTodo.done;
+        // console.log("nextTodo in index handle: ", nextTodo);
+        const newTodo = todos.map((todo) => {
+            // console.log("todo: ", todo);
+            if (todo.id === nextTodo.id) {
+                // console.log("Match found");
+                // return { ...todo, title: nextTodo.title };
+                return { ...todo, ...nextTodo };
+            } else return todo;
+        });
+        // console.log("newTodo in index handle: ", newTodo);
+        setTodos(newTodo);
     }
 
-    function handleDeleteTodo(todoId) {
-        const index = todos.findIndex((t) => t.id === todoId);
-        todos.splice(index, 1);
+	function handleDeleteTodo(todoId) {
+        const nextTodo = todos.filter((t) => t.id !== todoId);
+        setTodos(nextTodo);
     }
 
     return (

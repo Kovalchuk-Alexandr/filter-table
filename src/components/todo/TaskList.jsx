@@ -18,21 +18,25 @@ export default function TaskList({ todos, onChangeTodo, onDeleteTodo }) {
 }
 
 function Task({ todo, onChange, onDelete }) {
-    const [isEditing, setIsEditing] = useState(false);
+	const [isEditing, setIsEditing] = useState(false);
+	const [title, setTitle] = useState(todo.title);
     let todoContent;
     if (isEditing) {
         todoContent = (
             <>
-                <input
-                    className="input-inset"
-                    value={todo.title}
-                    onChange={(e) => {
-                        onChange({
-                            ...todo,
-                            title: e.target.value,
-                        });
-                    }}
-                />
+                <div className="list-title">
+                    <input
+                        className="input-inset"
+                        value={title}
+                        onChange={(e) => {
+                            setTitle(e.target.value);
+                            onChange({
+                                ...todo,
+                                title: e.target.value,
+                            });
+                        }}
+                    />
+                </div>
                 <button
                     className="button-inset button-inset--small"
                     onClick={() => setIsEditing(false)}
@@ -44,7 +48,8 @@ function Task({ todo, onChange, onDelete }) {
     } else {
         todoContent = (
             <>
-                {todo.title}
+                <div className="list-title">{title}</div>
+
                 <button
                     className="button-inset button-inset--small"
                     onClick={() => setIsEditing(true)}
