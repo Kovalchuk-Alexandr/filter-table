@@ -142,7 +142,7 @@ img { width: 100px; height: 100px; border-radius: 50%; }
 	flex-direction: column;
 	/* justify-content: space-between; */
 	align-items: center;
-	gap: 15px;
+	gap: 5px;
 }
 
 .flex-start {

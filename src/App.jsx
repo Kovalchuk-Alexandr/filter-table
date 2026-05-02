@@ -8,6 +8,9 @@ import ShoppingCart from "./components/ShoppingCart";
 import TaskApp from "./components/todo";
 import Picture from "./components/PictureBg";
 import EditProfile from "./components/EditProfile";
+import MovingDot from "./components/MovingDot";
+import FeedbackForm from "./components/FeedbackForm";
+import MailClient from "./components/mailclient/MailClient";
 
 function ProductCategoryRow({ category }) {
 	return (
@@ -109,6 +112,13 @@ function App() {
   return (
       <>
           <FilterableProductTable className="frame" products={PRODUCTS} />
+          <hr className="modern-line" />
+          <h3>Mail Client</h3>
+          <MailClient />
+          <hr className="modern-line" />
+          <FeedbackForm />
+          <hr className="modern-line" />
+          <MovingDot />
           <hr className="modern-line" />
           <EditProfile />
           <hr className="modern-line" />
