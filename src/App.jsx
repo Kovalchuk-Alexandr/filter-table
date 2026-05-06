@@ -11,6 +11,11 @@ import EditProfile from "./components/EditProfile";
 import MovingDot from "./components/MovingDot";
 import FeedbackForm from "./components/FeedbackForm";
 import MailClient from "./components/mailclient/MailClient";
+import Accordion from "./components/accordion/Accordion";
+import SyncedInputs from "./components/SyncedInputs";
+import FilterableList from "./components/FilterableList";
+import ContactManager from "./components/contactmanager/ContactManager";
+import CounterB from "./components/CounterB";
 
 function ProductCategoryRow({ category }) {
 	return (
@@ -112,6 +117,21 @@ function App() {
   return (
       <>
           <FilterableProductTable className="frame" products={PRODUCTS} />
+          <hr className="modern-line" />
+          <h3>Render the second counter</h3>
+          <CounterB />
+          <hr className="modern-line" />
+          <h3>Contact Manager</h3>
+          <ContactManager />
+          <hr className="modern-line" />
+          <h3>FilterableList</h3>
+          <FilterableList />
+          <hr className="modern-line" />
+          <h3>SyncedInputs (синхронизация ввода)</h3>
+          <SyncedInputs />
+          <hr className="modern-line" />
+          <h3>Accordion</h3>
+          <Accordion />
           <hr className="modern-line" />
           <h3>Mail Client</h3>
           <MailClient />

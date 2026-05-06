@@ -100,6 +100,11 @@ th.category-title {text-align: center;}
 	max-width: 300px;
 }
 
+.wrapper {
+	display: flex;
+	gap: 15px;
+}
+
 .product-table{
 	width: 100%;
 }
@@ -134,8 +139,8 @@ img { width: 100px; height: 100px; border-radius: 50%; }
 	padding: 10px 10px;
 	border: 1px solid #d3d3d3;
 	border-radius: 10px;
-
 }
+.article--50 {max-width: 46%; flex-grow: 1;}
 
 .flex {
 	display: flex;
@@ -152,6 +157,11 @@ img { width: 100px; height: 100px; border-radius: 50%; }
 	align-items: flex-start;
 	gap: 15px;
 }
+.grid {
+	display: grid;
+	grid-template-columns: 13ch auto 0.3fr;
+	align-items: center;
+}
 
 .center {text-align: center;}
 
@@ -160,7 +170,7 @@ img { width: 100px; height: 100px; border-radius: 50%; }
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
-	gap: 10px;
+	gap: 8px;
 }
 
 .modern-line {
@@ -185,10 +195,13 @@ ul.list {margin-left: 40px; list-style-type: auto}
 .list-item {list-style: disc;}
 .list-item::before {content: •;}
 
-.list {display: flex;
-justify-content: flex-start;
-align-items: center;
-gap: 15px;
+.list {
+	padding: 1px 3px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 15px;
+	width: 80%;
 }
 
 .list-title {width: 240px;}
@@ -200,10 +213,11 @@ gap: 15px;
 	gap: 15px;
 }
 
-.button-set {display: flex;
-	justify-content: space-between;
+.button-set {
+	display: flex;
+	justify-content: flex-start;
 	align-items: center;
-	gap: 10px;
+	gap: 15px;
 }
 
 .button-inset {
@@ -220,8 +234,9 @@ gap: 15px;
 }
 
 .button-inset--small {width: 70px;}
+.button-inset--middle {width: 100px;}
 
-.button-inset:active {
+.button-inset:active, .button-inset--active {
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -281,4 +296,29 @@ gap: 15px;
 	align-items: center;
 	gap: 10px;
 	line-height: 34px;
+}
+
+.highlighted { background: #d2eaff; }
+.panel {
+  padding: 10px;
+  border: 1px solid #aaa;
+}
+.panel-title {margin-bottom: 8px;}
+.counter {
+	margin: 0 20px 20px 0;
+	padding: 20px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+
+	width: 100px;
+	text-align: center;
+	border: 1px solid gray;
+	border-radius: 4px;
+}
+
+.hover {
+  background: #ffffd8;
 }
