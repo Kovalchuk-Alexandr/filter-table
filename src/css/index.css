@@ -157,12 +157,32 @@ img { width: 100px; height: 100px; border-radius: 50%; }
 	align-items: flex-start;
 	gap: 15px;
 }
+.chat {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+	padding: 8px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+}
+
+.chat textarea {width: 100%; resize: none; margin-right: unset;}
+
 .grid {
 	display: grid;
 	grid-template-columns: 13ch auto 0.3fr;
 	align-items: center;
 }
 
+.grid-25ch-2fr {
+	display: grid;
+	grid-template-columns: 28ch auto auto;
+	align-items: center;
+	gap: 15px;
+}
+
+.task-input {min-width: 25ch;}
 .center {text-align: center;}
 
 .person-content {
@@ -235,6 +255,7 @@ ul.list {margin-left: 40px; list-style-type: auto}
 
 .button-inset--small {width: 70px;}
 .button-inset--middle {width: 100px;}
+.button-inset--full {width: unset;}
 
 .button-inset:active, .button-inset--active {
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
@@ -297,6 +318,8 @@ ul.list {margin-left: 40px; list-style-type: auto}
 	gap: 10px;
 	line-height: 34px;
 }
+
+.label-item--nerrow {line-height: normal;}
 
 .highlighted { background: #d2eaff; }
 .panel {

@@ -16,6 +16,8 @@ import SyncedInputs from "./components/SyncedInputs";
 import FilterableList from "./components/FilterableList";
 import ContactManager from "./components/contactmanager/ContactManager";
 import CounterB from "./components/CounterB";
+import Messenger from "./components/messengerReducer/Messenger";
+import TaskAppReducer from "./components/taskappreducer/TaskAppReducer";
 
 function ProductCategoryRow({ category }) {
 	return (
@@ -117,6 +119,12 @@ function App() {
   return (
       <>
           <FilterableProductTable className="frame" products={PRODUCTS} />
+          <hr className="modern-line" />
+          <h3>TaskApp Reducer</h3>
+          <TaskAppReducer />
+          <hr className="modern-line" />
+          <h3>Messenger Reducer</h3>
+          <Messenger />
           <hr className="modern-line" />
           <h3>Render the second counter</h3>
           <CounterB />
