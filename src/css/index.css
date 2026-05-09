@@ -133,6 +133,8 @@ li {
 }
 img { width: 100px; height: 100px; border-radius: 50%; }
 
+.image {border-radius: 8px; width: revert-layer; height: revert-layer;}
+
 .title {margin-left: 20px; margin-bottom: 10px;}
 .article {
 	max-width: 600px;
