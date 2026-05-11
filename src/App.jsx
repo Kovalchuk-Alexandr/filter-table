@@ -19,6 +19,7 @@ import CounterB from "./components/CounterB";
 import Messenger from "./components/messengerReducer/Messenger";
 import TaskAppReducer from "./components/taskappreducer/TaskAppReducer";
 import LargeImages from "./components/contextimages/LargeImages";
+import TaskAppReducerContext from "./components/taskappreducercontext/TaskAppReducerContext";
 
 function ProductCategoryRow({ category }) {
 	return (
@@ -120,6 +121,9 @@ function App() {
   return (
       <>
           <FilterableProductTable className="frame" products={PRODUCTS} />
+          <hr className="modern-line" />
+          <h3>TaskApp Reducer Context</h3>
+          <TaskAppReducerContext />
           <hr className="modern-line" />
           <h3>InLarge Images through Context</h3>
           <LargeImages />
