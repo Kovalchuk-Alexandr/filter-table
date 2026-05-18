@@ -20,6 +20,10 @@ import Messenger from "./components/messengerReducer/Messenger";
 import TaskAppReducer from "./components/taskappreducer/TaskAppReducer";
 import LargeImages from "./components/contextimages/LargeImages";
 import TaskAppReducerContext from "./components/taskappreducercontext/TaskAppReducerContext";
+import VideoPlayer from "./components/VideoPlayer";
+import CatFriends from "./components/CatFriends";
+import TodoListEffect from "./components/todo/TodoListEffect";
+import FormMessage from "./components/FormMessage";
 
 function ProductCategoryRow({ category }) {
 	return (
@@ -121,6 +125,18 @@ function App() {
   return (
       <>
           <FilterableProductTable className="frame" products={PRODUCTS} />
+          <hr className="modern-line" />
+          <h3>Form Message</h3>
+          <FormMessage />
+          <hr className="modern-line" />
+          <h3>Todo List using Effect</h3>
+          <TodoListEffect />
+          <hr className="modern-line" />
+          <h3>CatFriends</h3>
+          <CatFriends />
+          <hr className="modern-line" />
+          <h3>Video Player</h3>
+          <VideoPlayer />
           <hr className="modern-line" />
           <h3>TaskApp Reducer Context</h3>
           <TaskAppReducerContext />
