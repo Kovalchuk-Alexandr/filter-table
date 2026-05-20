@@ -164,9 +164,9 @@ img { width: 100px; height: 100px; border-radius: 50%; }
 	flex-direction: column;
 	align-items: center;
 	gap: 15px;
-	padding: 8px;
+	/* padding: 8px;
     border: 1px solid #d3d3d3;
-    border-radius: 5px;
+    border-radius: 5px; */
 }
 
 .chat textarea {width: 100%; resize: none; margin-right: unset;}
@@ -211,6 +211,15 @@ img { width: 100px; height: 100px; border-radius: 50%; }
     height: 0;
     width: 50%;
     margin: 20px auto; /* Центрирование и отступы */
+}
+
+.modern-line--thin {
+	border: none;
+	border-top: 1px solid #333;
+	color: #333;
+	height: 0;
+	width: 80%;
+	margin: 8px auto; /* Центрирование и отступы */
 }
 
 ul.list {margin-left: 40px; list-style-type: auto}
@@ -285,6 +294,51 @@ ul.list {margin-left: 40px; list-style-type: auto}
     background: transparent;
     box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s;
+}
+
+.select-wrapper {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 8px;
+
+	padding: 0.5rem;
+	cursor: pointer;
+}
+
+.select-wrapper select {
+	appearance: none;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 6px;
+	background: transparent;
+	/* box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2); */
+	transition: box-shadow 0.3s;
+	cursor: pointer;
+}
+
+.select-wrapper select:focus-visible {
+	/* box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+	outline: 1px solid rgba(0, 0, 0, 0.25); */
+	appearance: none;
+	outline: none;
+
+}
+
+
+.input-inset--select{
+	position: relative;
+	padding: 0.5rem;
+	cursor: pointer;
+}
+.select-wrapper:after {
+	content: "▼";
+	/* position: absolute; */
+	/* right: 10px;
+	top: 50%;
+	transform: translateY(-50%); */
+	pointer-events: none;
+
 }
 
 .input-inset:active, .input-inset:focus {
@@ -363,6 +417,8 @@ ul.list {margin-left: 40px; list-style-type: auto}
 
 .label-item--nerrow {line-height: normal;}
 
+.text {white-space: nowrap;}
+
 .highlighted { background: #d2eaff; }
 .panel {
   padding: 10px;
@@ -386,4 +442,10 @@ ul.list {margin-left: 40px; list-style-type: auto}
 
 .hover {
   background: #ffffd8;
+}
+
+.message {
+  text-align: center;
+  align-self: center;
+  color:red;
 }

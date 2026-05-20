@@ -24,6 +24,9 @@ import VideoPlayer from "./components/VideoPlayer";
 import CatFriends from "./components/CatFriends";
 import TodoListEffect from "./components/todo/TodoListEffect";
 import FormMessage from "./components/FormMessage";
+import DotMove from "./components/DotMove";
+import Encryption from "./components/encryption/Encryption";
+import PlanetPlace from "./components/planets/PlanetPlace";
 
 function ProductCategoryRow({ category }) {
 	return (
@@ -125,6 +128,15 @@ function App() {
   return (
       <>
           <FilterableProductTable className="frame" products={PRODUCTS} />
+          <hr className="modern-line" />
+          <h3>Planet & Places</h3>
+          <PlanetPlace />
+          <hr className="modern-line" />
+          <h3>Encryption</h3>
+          <Encryption />
+          <hr className="modern-line" />
+          <h3>Dot allowed to move on checked</h3>
+          <DotMove />
           <hr className="modern-line" />
           <h3>Form Message</h3>
           <FormMessage />
