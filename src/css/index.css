@@ -9,6 +9,8 @@ body {
     /* outline: 1px solid lightgray; */
 }
 
+.dark { background: #444141; color: #eee; }
+
 h1 {
   margin-top: 0;
   font-size: 22px;
@@ -222,6 +224,11 @@ img { width: 100px; height: 100px; border-radius: 50%; }
 	margin: 8px auto; /* Центрирование и отступы */
 }
 
+.dark .modern-line, .dark .modern-line--thin {
+	border-color: #eee;
+	color: #eee;
+}
+
 ul.list {margin-left: 40px; list-style-type: auto}
 .list-item {list-style: disc;}
 .list-item::before {content: •;}
@@ -264,15 +271,22 @@ ul.list {margin-left: 40px; list-style-type: auto}
     transition: box-shadow 0.3s;
 }
 
+.dark .button-inset {
+	background: #555555;
+	color: #eee;
+	box-shadow: inset 0px 0px 3px rgba(255, 255, 255, 0.2);
+}
+
 .button-inset--small {width: 70px;}
 .button-inset--middle {width: 100px;}
 .button-inset--full {width: unset;}
 
 .button-inset:active, .button-inset--active {
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0px 5px rgba(167, 167, 167, 0.3);
 }
 
-.button-inset:hover {outline: 1px solid rgba(0, 0, 0, 0.25);}
+.button-inset:hover {outline: 1px solid rgba(168, 168, 168, 0.25);}
+.dark .button-inset:hover {outline: 1px solid rgba(255, 255, 255, 0.25);}
 
 .button-inset:disabled {
 	background: #e0e0e0;
@@ -294,6 +308,12 @@ ul.list {margin-left: 40px; list-style-type: auto}
     background: transparent;
     box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s;
+}
+
+.dark .input-inset {
+	background: #555555;
+	color: #eee;
+	box-shadow: inset 0px 0px 3px rgba(255, 255, 255, 0.2);
 }
 
 .select-wrapper {
@@ -347,6 +367,12 @@ ul.list {margin-left: 40px; list-style-type: auto}
 }
 
 .input-inset:hover {outline: 1px solid rgba(0, 0, 0, 0.25);}
+
+.dark .input-inset:hover {outline: 1px solid rgba(255, 255, 255, 0.25);}
+.dark .input-inset:active, .dark .input-inset:focus {
+	box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.3);
+	outline: 1px solid rgba(255, 255, 255, 0.25);
+}
 
 /* Для PictureBg */
 .background {
@@ -448,4 +474,8 @@ ul.list {margin-left: 40px; list-style-type: auto}
   text-align: center;
   align-self: center;
   color:red;
+}
+
+.dark .message {
+  color: #eef7a0;
 }

@@ -5,6 +5,8 @@
 ## Учебные задания/решения
 
 - &lt;FilterableProductTable/> - таблицы продуктов с поиском и фильтром
+- &lt;ChatRoomTheme /> - переключение темы вынесено в `useEffectEvent`, чтобы в консоли логировалось только изменение комнат и адреса подключения
+- &lt;WelcomeAnimation /> - вынос анимации в `useEffectEvent`, чтобы на запускалась при изменении `duration`
 - &lt;PlanetPlace /> - Цепочка связанных select-box
 - &lt;Encryption /> - Взаимодействие select и checkbox с отображением подключения в консоли
 - &lt;DotMove /> - разрешение движения точки при checkbox ON
