@@ -29,6 +29,8 @@ import Encryption from "./components/encryption/Encryption";
 import PlanetPlace from "./components/planets/PlanetPlace";
 import WelcomeAnimation from "./components/welcome/WelcomeAnimation";
 import ChatRoomTheme from "./components/chatroom/ChatRoomTheme";
+import DotsMoveDelay from "./components/dotsmovedelay/DotsMoveDeley";
+import OnlineStatus from "./components/onlinestatus/OnlineStatus";
 
 function ProductCategoryRow({ category }) {
 	return (
@@ -130,6 +132,12 @@ function App() {
   return (
       <>
           <FilterableProductTable className="frame" products={PRODUCTS} />
+          <hr className="modern-line" />
+          <h3>Dots Move with Delay</h3>
+          <DotsMoveDelay />
+          <hr className="modern-line" />
+          <h3>Online Status</h3>
+          <OnlineStatus />
           <hr className="modern-line" />
           <h3>ChatRoom Theme</h3>
           <ChatRoomTheme />
